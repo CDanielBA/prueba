@@ -1,0 +1,23 @@
+{
+  "name": "maqueta",
+  "version": "1.0.0",
+  "description": "maqueta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "daniel burbano",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "gulp-concat": "^2.6.1"
+  }
+}

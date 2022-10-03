@@ -1,0 +1,327 @@
+.fondo{
+    max-width: 1924px;
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(/src/img/hudFondo.png);
+    background-position: center;
+}
+.fondo1{
+    background-image: url(/src/img/hudFrente.png);
+    background-repeat: no-repeat;
+    background-position:bottom;    
+}
+.fondo2{
+    width: 100%;
+    background-image: url(/src/img/puntosTexturaHud.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.fondoLogo{
+    position: relative;
+    background-image: url(/src/img/puntos2Hud.png);
+    width: 100%;
+    height: 20rem;   
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.avatarFondo{
+    background-image: url(/src/img/avatarFondo.png);
+    background-position: top;
+    
+}
+.decoracion{
+    background-image: url(/src/img/avatarDecoracion.png);
+    background-position: center;
+}
+.logo{
+    
+    padding-top: -2%;
+
+}
+
+.botons{
+    display: grid;
+    grid-template-columns: repeat(3,auto ) ;
+    justify-content: space-around;
+    align-content: flex-start;  
+    margin-top:2%;      
+}
+
+.botonsL{
+    display: flex; 
+    @include telefono{
+        flex-direction: row;
+        width: 100px;
+        height: 100px;
+    }
+    flex-direction: column;
+       
+    .btnP1{
+        cursor: pointer;
+        padding: 1rem;
+        background-image: url(/src/img/btnP1.png);   
+        &:hover{     
+            background-image: url(/src/img/btnP1Hover.png);
+        }
+    }
+    .btnP2{
+        @include telefono{
+        padding: 1rem;
+        margin-left: 2rem;
+        }
+        margin: 0;
+        background-image: url(/src/img/btnP2.png);
+        &:hover{            
+            background-image: url(/src/img/btnP2Hover.png);
+        }
+    }
+
+}
+
+.espacioLogo{
+    
+}
+.botonsR{
+    display: flex;
+    margin-top: 25%;
+    
+    @include telefono{
+        margin-top: 0;
+        flex-direction: row;
+        width: 100px;
+        height: 100px;
+    }
+    flex-direction: column;
+    
+    .btnMute{
+        padding: 2rem;        
+        background-image: url(/src/img/btnMute.png);        
+        &:hover{
+            background-image: url(/src/img/btnMuteHover.png);
+        }
+    }
+    .background{
+        padding: 2rem;        
+        background-image: url(/src/img/btnAudio.png);        
+        &:hover{
+            background-image: url(/src/img/btnAudioHover.png);
+        }
+    }
+    .btnHome{
+        padding: 1rem;
+        margin-top: .5rem;
+        margin-left: 0rem;
+        background-image: url(/src/img/btnHome.png);
+        @include telefono{
+            margin-left: 2rem;
+                    
+        }
+        &:hover{
+            background-image: url(/src/img/btnHomeHover.png);
+        }
+        .pin{
+            margin-bottom: 90%;
+            margin-left: 100%;
+        }
+    }
+    
+}
+.btn{
+    background-repeat: no-repeat;
+    background-position: center;
+    .msg{
+        margin-bottom: 70%;
+        margin-left: 100%;
+    }
+}
+
+
+
+
+
+
+.contAviso{
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+
+@include telefono{
+    .info{
+        margin-top: -100px;
+        margin-left: 18%;
+        width: 100%;
+        height: 5rem;
+        display: grid;
+        grid-template-columns:8% 92%;
+        justify-content: center;
+        // align-content: center;   
+        
+        .nivel{
+            width: 100%;
+            background-image: url(/src/img/conteLevel.png);
+            background-repeat: no-repeat;        
+            
+            .pNivel{
+                margin-top: 28px;
+                margin-left: 27px;
+                color: rgb(255, 255, 255);
+            }
+        }
+        .usuario{
+            width: 100%;
+            margin-top: 10px;
+            background-image: url(/src/img/conteInfoAvatar.png);
+            background-repeat: no-repeat;        
+            .pUsuario{
+                margin-left: 50px;
+                margin-top: 10px;
+                font-size:x-large;
+                font-weight: 600;
+                color: rgb(49, 69, 179);
+            }
+        }
+        .mision{
+            .pMision{
+                margin-top: -55px;
+                margin-left: 324px;
+                font-size:x-large;
+                font-weight: 600;
+                color: rgb(49, 69, 179);
+            }
+            .progressBar{
+                height: 20px;
+                width: 360px;
+                margin-left: 455px;
+                margin-top: -45px;
+                background-image: url(/src/img/barraProgresoAvatar.png);
+                background-repeat: no-repeat;
+                span{
+                    display: inline-block;
+                    width: 70%;
+                    margin-bottom: 1px;
+                    margin-left: 5px;
+                    height: 40%;
+                    border-radius: 5px;
+                    animation: loader 3s forwards;
+                    transition: width .4s ease-in-out;
+                    background: rgb(36, 50, 112);
+                    background-size: 30px 30px;
+                }
+            }
+
+        }
+    }
+}
+
+//modo telefono
+
+.usuario{
+    color: rgb(255, 255, 255);font-weight: 600;
+}
+
+.inf{
+    margin-top: -25%;
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .progressBartel{
+    
+        width:50%;
+        margin-top: 4%;
+        background-image: url(/src/img/barraProgresotel.png);
+        background-repeat: no-repeat;
+        background-position-x:center ;
+        height: 30px;
+        padding-bottom: 1rem;
+        span{
+            padding: 0;
+            display: inline-block;
+            width: 45%;
+            margin-top: 0%;
+            margin-left: 10%;
+            margin-bottom: -2px;
+            height: 38%;
+            border-radius: 5px;
+            animation: loader 3s forwards;
+            transition: width .4s ease-in-out;
+            background: rgb(36, 50, 112);
+            background-size: 30px 30px;
+        }
+    }
+
+    .nivelTel{
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        background-image: url(/src/img/conteLeveltel.png);
+        background-repeat: no-repeat;
+        margin-top: 11%;
+        
+        p{
+            color: rgb(36, 50, 112);
+            font-size:x-small ;
+            padding-left: 8px;
+            padding-top: 5px;
+        }
+
+    }
+}
+
+//fin telefono
+
+
+
+
+.mision{
+    .pMision{
+        margin-top: -55px;
+        margin-left: 324px;
+        font-size:x-large;
+        font-weight: 600;
+        color: rgb(49, 69, 179);
+    }
+    .progressBar{
+        height: 20px;
+        width: 360px;
+        margin-left: 455px;
+        margin-top: -45px;
+        background-image: url(/src/img/barraProgresoAvatar.png);
+        background-repeat: no-repeat;
+        span{
+            display: inline-block;
+            width: 50%;
+            margin-bottom: 1px;
+            margin-left: 5px;
+            height: 40%;
+            border-radius: 5px;
+            animation: loader 3s forwards;
+            transition: width .4s ease-in-out;
+            background: rgb(36, 50, 112);
+            background-size: 30px 30px;
+        }
+    }
+
+}
+
+
+@keyframes loader{
+    10%{width:10%;right: 40%; }
+    40%{width: 60%;}
+    50%{width:50%;right: 60%; }
+    
+    60%{width: 80%;}
+
+    0%{width:0%;right: 40%; }
+    40%{width: 60%;}
+
+    // 100%{left: 100%;}
+}

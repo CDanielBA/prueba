@@ -1,0 +1,38 @@
+//footer
+.footerTel{
+    background-image: url(/src/img/texturaInferior.png);
+    background-repeat: repeat-x;
+    padding-right: 100%;
+    padding-bottom: 13%;
+    
+}
+.conTextoTel{
+    position: absolute;
+    background-image: url(/src/img/conteTextoTel.png);
+    background-repeat: no-repeat;
+    // background-position: center;
+    padding: 28%;
+    padding-top: 8%;
+    padding-bottom: 0;
+    margin-left: 25%;
+    margin-top: 4%;
+}
+.imgConTextoTel{
+    margin-top: -45%;
+    margin-left: 48%;
+    padding: 2rem;
+    background-image: url(/src/img/btnArrow.png);
+    background-repeat: no-repeat;
+    background-position:right ;
+}
+.titConTextoTel{
+    font-weight: 600;
+    margin-top: -38%;
+    margin-left: -100%;
+}
+.texConTextoTel{
+    margin-left: -102%;
+    margin-top: -13px;
+}
+
+//FIN footer

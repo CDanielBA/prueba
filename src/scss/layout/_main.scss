@@ -1,0 +1,253 @@
+.fondoMain{
+    max-width: 1280;
+    background-image: url(/src/img/fondoTextura.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 30rem;
+    // margin-left: -100px;
+    margin-top: 10px;
+}
+.contAviso{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% 50% 20% 15%;
+    // display: flex;    
+    justify-content: center;    
+    align-items: center;
+}
+
+//telefono
+
+.fondoMain{
+    background-image: url(/src/img/puntosTextura.png);
+    background-position: left;
+    background-repeat: repeat-x;
+  
+}
+
+.botones{   
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;        
+    width: 120%;
+    margin-left: 10%;
+}
+
+.botonsT{
+    height: 10rem;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        margin-bottom: 2rem;
+        .btnPortal{
+           
+            background-image: url(/src/img/btnPortal.png);
+            &:hover{
+                background-image: url(/src/img/btnPortalHover.png);
+            }
+        }
+        .btnMirage{
+            margin-top: -80%;
+            background-image: url(/src/img/btnMirage.png);
+            &:hover{
+                background-image: url(/src/img/btnMirageHover.png);
+            }
+        }
+        .btnLago{
+            margin-bottom: -2rem;
+            
+            background-image: url(/src/img/btnLago.png);
+            &:hover{
+                background-image: url(/src/img/btnLagoHover.png);
+            }
+        }
+}
+
+.botonsB{
+    height: 8rem;
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        .btnArbol{
+            margin-left: -20%;
+            background-image: url(/src/img/btnArbol.png);
+            &:hover{
+                background-image: url(/src/img/btnArbolHover.png);
+            }
+        }
+        .btnMillau{
+            margin-bottom: -200%;
+            background-image: url(/src/img/btnMillau.png);
+            &:hover{
+                background-image: url(/src/img/btnMillauHover.png);
+            }
+        }
+        .btnLysa{
+            margin-right: -20%;
+            background-image: url(/src/img/btnLysa.png);
+            &:hover{
+                background-image: url(/src/img/btnLysaHover.png);
+            }
+        }
+    
+}
+
+//fin telefono
+
+@include telefono{
+    .fondoMain{
+        background-image: none;
+    }
+    .botones{
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;        
+        width: 500px;
+        // margin-top: -264px;
+        // margin-left: 232px;
+        
+    }
+    .botonsT{
+        height: 10rem;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        margin-bottom: 2rem;
+        .btnPortal{
+            margin-right: 22px;
+            margin-bottom: -2rem;
+            background-image: url(/src/img/btnPortal.png);
+            &:hover{
+                background-image: url(/src/img/btnPortalHover.png);
+            }
+        }
+        .btnMirage{
+            margin-top: -20px;
+            background-image: url(/src/img/btnMirage.png);
+            &:hover{
+                background-image: url(/src/img/btnMirageHover.png);
+            }
+        }
+        .btnLago{
+            margin-bottom: -2rem;
+            
+            background-image: url(/src/img/btnLago.png);
+            &:hover{
+                background-image: url(/src/img/btnLagoHover.png);
+            }
+        }
+    }
+    .botonsB{
+        height: 8rem;
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        .btnArbol{
+            margin-left: 60px;
+            background-image: url(/src/img/btnArbol.png);
+            &:hover{
+                background-image: url(/src/img/btnArbolHover.png);
+            }
+        }
+        .btnMillau{
+            margin-bottom: -50px;
+            background-image: url(/src/img/btnMillau.png);
+            &:hover{
+                background-image: url(/src/img/btnMillauHover.png);
+            }
+        }
+        .btnLysa{
+            margin-right: 60px;
+            background-image: url(/src/img/btnLysa.png);
+            &:hover{
+                background-image: url(/src/img/btnLysaHover.png);
+            }
+        }
+    }
+}
+
+
+.aviso{
+    background-image: url(/src/img/conteTexto.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    // margin-left: 50rem;
+    // margin-top: -768px;
+    .arrow{
+        background-image: url(/src/img/btnArrow.png);
+        background-repeat: no-repeat;
+        // background-position: right;        
+        margin-left: 65%;
+        margin-top: 30%;
+        width: 50px;
+        height: 50px;
+        &:hover{
+            background-image: url(/src/img/btnArrowHover.png);
+        }
+    }
+    .texto{
+        h3{ margin-bottom: 0;}
+        p{margin-top: 0;}
+        margin: 0% 15% 15% 20%;
+                
+    }
+}
+
+.overlay{
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.397);    
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .conImg{           
+        // position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        
+    }
+    .conTexto{
+        display: block;
+        @include telefono{
+            margin-left: -35%;
+            margin-top: 8%;
+        }
+        margin-left: -65%;
+        margin-top: 13%;
+        
+        
+    }
+    
+    h2{
+        text-align: center;
+        // margin-left: -112px;
+    }
+    p{
+        margin-right:20% ;
+        margin-left: 20%;
+    }
+    
+}
+
+
+.btnCerrar{
+    width: 45px;
+    height: 45px;
+    position: relative;
+    margin-top: 7%;
+    margin-left:- 20% ;
+    cursor: pointer;
+}
+
+.difuminado{
+    filter: grayscale(50%) blur(2px);
+}
+
+.background{
+    background-image: url(/src/img/btnAudio.png);
+}
